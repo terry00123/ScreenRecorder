@@ -1,0 +1,37 @@
+[
+  {
+    "question": "How do I download/install magisk module?",
+    "answer": "<ol><li>Make sure you have latest magisk and magisk manager installed</li><li>Click \"ScreenCam Magisk Module\" under misc from ScreenCam app</li><li>Open the link in your browser</li><li>Choose the upstream you want to use (Beta or stable; stable recommended)</li>f-droid or the app was downloaded from any place other than f-droid, playstore if your choice)</li><li>Download the latest magisk module version</li><li>Uninstall any version of screencam installed previously. Note: You don't have to do this every time there is update. Required for first time module install only.</li><li>Flash the module in magisk and reboot</li></ol><br/><br/>You will be able to take updates from playstore or f-droid without any hassle of reinstalling/updating magisk module.",
+    "weight": 9
+  },
+  {
+    "question": "How do I update magisk module?",
+    "answer": "First, updating magisk module is redundant and will not be required after installing it once (unless specified in the update changelog). With that being said, you can still download the latest module and flashing it from magisk",
+    "weight": 1
+  },
+  {
+    "question": "How do I record internal audio with screenrecorder?",
+    "answer": "Recording internal audio (without mic) requires magisk module to be installed to systemize screenrecorder.<br/>This is because, the internal audio recording API requires the app to run with elevated permission which is granted to only system apps. Don't worry, magisk does not modify any system files. After all, magisk modules were build only for such cases. See <b>How do I download/install magisk module?</b> also, see <b>I cannot hear any audio while recording with internal audio recording</b> To know more about internal audio recording",
+    "weight": 10
+  },
+  {
+    "question": "I cannot hear any audio while recording with internal audio recording",
+    "answer": "This is not a bug and it is how the API works when the internal audio is recorded with r_Submix stream. Android re-routes the audio to internal audio source to the app and that is directly encoded into the video. Unfortunately nothing can be done about this.",
+    "weight": 10
+  },
+  {
+    "question": "What is the difference between Internal Audio(Default Source) and Internal Audio (System app, R-Submix)?",
+    "answer": "Default Source works on only few selected devices (mostly on phones which has call recording built-in) and uses standard public API to record internal audio. The drawback being, it also records mic input and there could be lot of noise added to the recorded audio.<br/><b>Note:</b> The audio output is not recorded from mic. Instead the internal audio and the mic input are mixed together by android",
+    "weight": 8
+  },
+  {
+    "question": "What is the difference between Internal Audio(Default Source) and Internal Audio (System app, R-Submix)?",
+    "answer": "Default Source works on only few selected devices (mostly on phones which has call recording built-in) and uses standard public API to record internal audio. The drawback being, it also records mic input and there could be lot of noise added to the recorded audio.<br/><b>Note:</b> The audio output is not recorded from mic. Instead the internal audio and the mic input are mixed together by android",
+    "weight": 8
+  },
+  {
+    "question": "Problem?",
+    "answer": "Report it by mailing to <a href=\"mailto:contact@orpheusdroid.com\">contact@orpheusdroid.com</a><br/>OR<br/>Join telegram group at <a href=\"https://t.me/joinchat/C_ZSIUKiqUCI5NsPMAv0eA\">https://t.me/joinchat/C_ZSIUKiqUCI5NsPMAv0eA</a>",
+    "weight": -1
+  }
+]

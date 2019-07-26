@@ -1,0 +1,183 @@
+<!--
+  ~ Copyright 2018 The app Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/video_settings_header">
+
+        <ListPreference
+            app:defaultValue="1080"
+            app:entries="@array/resolutionsArray"
+            app:entryValues="@array/resolutionValues"
+            app:key="@string/res_key"
+            app:summary="@string/preference_resolution_summary"
+            app:title="@string/preference_resolution_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            app:defaultValue="30"
+            app:entries="@array/fpsArray"
+            app:entryValues="@array/fpsArray"
+            app:key="@string/fps_key"
+            app:summary="@string/preference_fps_summary"
+            app:title="@string/preference_fps_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            app:defaultValue="7130317"
+            app:entries="@array/bitrateArray"
+            app:entryValues="@array/bitratesValue"
+            app:key="@string/bitrate_key"
+            app:summary="@string/preference_bit_summary"
+            app:title="@string/preference_bit_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            app:defaultValue="auto"
+            app:entries="@array/orientationEntries"
+            app:entryValues="@array/orientationValues"
+            app:key="@string/orientation_key"
+            app:summary="@string/preference_orientation_summary"
+            app:title="@string/preference_orientation_title"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/audio_settings_header">
+
+        <ListPreference
+            app:defaultValue="0"
+            app:entries="@array/audioSettingsEntries"
+            app:entryValues="@array/audioSettingsValues"
+            app:key="@string/audiorec_key"
+            app:summary="@string/preference_audio_record_summary"
+            app:title="@string/preference_audio_record_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            app:defaultValue="192000"
+            app:entries="@array/audioBitRates"
+            app:entryValues="@array/audioBitRateValues"
+            app:key="@string/audiobitrate_key"
+            app:summary=""
+            app:title="@string/preference_audio_bitrate_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            app:defaultValue="1"
+            app:entries="@array/audioChannels"
+            app:entryValues="@array/audioChannelValues"
+            app:key="@string/audiochannels_key"
+            app:summary=""
+            app:title="@string/preference_audio_channel_title"
+            app:useSimpleSummaryProvider="true" />
+        <ListPreference
+            app:defaultValue="48000"
+            app:entries="@array/audioSamplingRates"
+            app:entryValues="@array/audioSamplingRateValues"
+            app:key="@string/audiosamplingrate_key"
+            app:summary=""
+            app:title="@string/preference_audio_sampling_rate_title"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/recording_settings_header">
+        <CheckBoxPreference
+            app:defaultValue="false"
+            app:key="@string/preference_floating_control_key"
+            app:summary="@string/preference_floating_control_summary"
+            app:title="@string/preference_floating_control_title" />
+        <!--<com.orpheusdroid.screenrecorder.preferences.SeekBarPreference
+            app:key="@string/preference_floating_control_size_key"
+            app:summary="@string/preference_floating_control_size_summary"
+            app:title="@string/preference_floating_control_size_title"
+            app:text=" DP"
+            app:defaultValue="100"
+            app:max="200"
+            app:persistent="true"
+            app:dependency="@string/preference_floating_control_key"
+            /> -->
+        <CheckBoxPreference
+            app:defaultValue="false"
+            app:key="@string/preference_show_touch_key"
+            app:summary="@string/preference_show_touch_summary"
+            app:title="@string/preference_show_touch_title" />
+
+        <CheckBoxPreference
+            app:defaultValue="false"
+            app:key="@string/preference_camera_overlay_key"
+            app:summary="@string/preference_camera_overlay_summary"
+            app:title="@string/preference_camera_overlay_title" />
+        <CheckBoxPreference
+            app:defaultValue="false"
+            app:key="@string/preference_enable_target_app_key"
+            app:summary="@string/preference_enable_target_app_summary"
+            app:title="@string/preference_enable_target_app_title" />
+
+        <com.orpheusdroid.screenrecorder.ui.settings.AppPickerPreference
+            android:defaultValue="none"
+            android:dependency="@string/preference_enable_target_app_key"
+            android:key="@string/preference_app_chooser_key"
+            android:summary="@string/preference_app_chooser_summary"
+            android:title="@string/preference_app_chooser_title"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:title="@string/misc_settings_header">
+        <ListPreference
+            app:key="@string/preference_language_key"
+            app:summary="@string/preference_language_summary"
+            app:title="@string/preference_language_title"
+            app:entries="@array/languageEntries"
+            app:entryValues="@array/languageEntries"
+            app:useSimpleSummaryProvider="true" />
+
+        <Preference
+            android:key="@string/preference_magisk_download_key"
+            android:summary="@string/preference_magisk_download_summary"
+            android:title="@string/preference_magisk_download_title" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://screenrecorder.orpheusdroid.com/downloads/magisk/stable/"
+                />
+        </Preference>
+        <Preference
+            android:key="@string/preference_faq_key"
+            android:summary="@string/preference_faq_summary"
+            android:title="@string/preference_faq_title" >
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="com.orpheusdroid.screenrecorder"
+                android:targetClass="com.orpheusdroid.screenrecorder.ui.FAQActivity"
+                />
+        </Preference>
+        <Preference
+            app:fragment="com.orpheusdroid.screenrecorder.ui.settings.fragments.AdvanceSettingsFragment"
+            app:title="@string/preference_advance_settings_title"
+            app:summary="@string/preference_advance_settings_summary" />
+
+    </PreferenceCategory>
+
+    <Preference
+        android:selectable="false"
+        android:summary=""
+        android:title=""
+        android:visibility="invisible" />
+
+</androidx.preference.PreferenceScreen>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/floating_controls_max_width"
+    android:layout_height="@dimen/floating_controls_view_radius">
+
+    <ImageView
+        android:id="@+id/iv_start"
+        android:layout_width="36.0dip"
+        android:layout_height="24.0dip"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="21.0dip"
+        android:paddingEnd="12.0dip"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_record" />
+
+    <ImageView
+        android:id="@+id/iv_cancel"
+        android:layout_width="36.0dip"
+        android:layout_height="24.0dip"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="21.0dip"
+        android:layout_toEndOf="@id/iv_start"
+        android:paddingStart="12.0dip"
+        android:scaleType="centerInside"
+        android:src="@drawable/bg_btn_cancel" />
+</RelativeLayout>

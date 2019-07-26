@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="21dp"
+    android:elevation="16dp"
+    card_view:cardCornerRadius="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/about_info_version"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/info_version_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/about_info_magisk_mode"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/info_magisk_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/about_info_root_mode"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/info_root_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/about_info_build_type"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/info_build_type_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5" />
+        </LinearLayout>
+
+        <com.google.android.material.chip.ChipGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:singleLine="false">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/source_chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:chipIcon="@drawable/ic_web_chip"
+                android:text="@string/about_info_source"
+                android:onClick="onChipClick"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/license_chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/about_info_license"
+                app:chipIcon="@drawable/ic_opensource_chip"
+                android:onClick="onChipClick" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/support_chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/about_info_support"
+                app:chipIcon="@drawable/ic_support_chip"
+                android:onClick="onChipClick" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/translate_chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/about_info_translation"
+                app:chipIcon="@drawable/ic_translate_chip"
+                android:onClick="onChipClick" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <TextView
+            android:id="@+id/footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/about_info_footer" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

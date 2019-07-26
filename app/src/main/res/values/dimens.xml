@@ -1,0 +1,15 @@
+<resources>
+    <dimen name="tall_toolbar_height">240dp</dimen>
+    <dimen name="toolbar_image_offset_top">48dp</dimen>
+    <dimen name="toolbar_offset_start">124dp</dimen>
+    <dimen name="toolbar_offset_top">124dp</dimen>
+    <dimen name="toolbar_collapsed_height">48dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="floating_controls_max_width">183.0dip</dimen>
+    <dimen name="floating_controls_min_width">93.0dip</dimen>
+    <dimen name="floating_controls_view_radius">51.0dip</dimen>
+    <dimen name="floating_controls_time_text_size">16.0dip</dimen>
+</resources>

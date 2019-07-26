@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Preference
+        android:key="pref_static_field_key"
+        android:selectable="false"
+        android:summary="@string/preference_advanced_settings_warning_text"/>
+    <PreferenceCategory
+        app:title="@string/advance_video_settings_header">
+
+        <ListPreference
+            app:defaultValue="0"
+            app:entries="@array/videoEncoderEntries"
+            app:entryValues="@array/videoEncoderValues"
+            app:key="@string/preference_advanced_settings_video_encoder_key"
+            app:summary="@string/preference_advanced_settings_video_encoder_description"
+            app:title="@string/preference_advanced_settings_video_encoder_title" />
+
+    </PreferenceCategory>
+</androidx.preference.PreferenceScreen>

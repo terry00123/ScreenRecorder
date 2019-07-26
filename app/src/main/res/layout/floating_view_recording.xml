@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/floating_controls_max_width"
+    android:layout_height="@dimen/floating_controls_view_radius"
+    android:keepScreenOn="true">
+
+    <ImageView
+        android:id="@+id/iv_pause_resume"
+        android:layout_width="24.0dip"
+        android:layout_height="24.0dip"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="21.0dip"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_pause" />
+
+    <RelativeLayout
+        android:id="@+id/rl_time"
+        android:layout_width="@dimen/floating_controls_min_width"
+        android:layout_height="@dimen/floating_controls_view_radius"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/iv_pause_resume"
+        android:background="@drawable/ic_floating_controls_background"
+        android:gravity="center"
+        android:paddingLeft="12.0dip"
+        android:paddingRight="12.0dip">
+
+        <ImageView
+            android:id="@+id/iv_record"
+            android:layout_width="16.0dip"
+            android:layout_height="16.0dip"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_record" />
+
+        <Chronometer
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="7.0dip"
+            android:layout_toRightOf="@id/iv_record"
+            android:autoSizeMaxTextSize="@dimen/floating_controls_time_text_size"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:maxLines="1"
+            android:scaleType="centerInside"
+            android:textColor="@android:color/primary_text_dark"
+            android:textSize="@dimen/floating_controls_time_text_size" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_stop"
+        android:layout_width="24.0dip"
+        android:layout_height="24.0dip"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="21.0dip"
+        android:layout_toEndOf="@id/rl_time"
+        android:src="@drawable/ic_stop" />
+</RelativeLayout>

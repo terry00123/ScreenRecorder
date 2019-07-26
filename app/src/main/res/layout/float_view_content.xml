@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.orpheusdroid.screenrecorder.views.FloatingView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/floating_controls_max_width"
+    android:layout_height="51.0dip">
+
+    <com.orpheusdroid.screenrecorder.views.RoundView
+        android:id="@+id/mask"
+        android:layout_width="@dimen/floating_controls_max_width"
+        android:layout_height="@dimen/floating_controls_view_radius"
+        android:clickable="false"
+        android:focusable="false" />
+
+    <include
+        android:id="@+id/parent_idle"
+        layout="@layout/floating_view_idle" />
+
+    <include
+        android:id="@+id/parent_recording"
+        layout="@layout/floating_view_recording" />
+</com.orpheusdroid.screenrecorder.views.FloatingView>

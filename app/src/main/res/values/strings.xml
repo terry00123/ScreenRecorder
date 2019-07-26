@@ -1,0 +1,178 @@
+<resources>
+    <string name="app_name">ScreenCam</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_videos">Videos</string>
+    <string name="donate_activity_label">Donate</string>
+
+
+    <string name="advance_settings_title">Advance Settings</string>
+
+    <!-- Menu Titles -->
+    <string name="menu_privacy_policy">Privacy Policy</string>
+    <string name="menu_donate">Donate</string>
+    <string name="menu_help">Get Help</string>
+    <string name="menu_delete">delete</string>
+    <string name="menu_select_all">select all</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_about_title">About</string>
+    <string name="menu_faq_title">FAQ</string>
+
+    <!-- Alert Dialog Strings -->
+    <string name="storage_permission_request_title">Allow Storage Permission</string>
+    <string name="storage_permission_request_summary">Write permission to storage is required to save the recorded video.</string>
+    <string name="alert_dialog_internal_audio_warning_title">Warning</string>
+    <string name="alert_dialog_internal_audio_warning_message">Internal audio recording records audio along with mic audio.\nAlso, it does not work on all phones (Confirmed working on OnePlus, Xiaomi, and few Moto phones). You might try your luck</string>
+    <string name="alert_dialog_r_submix_audio_warning_message">Recording internal audio using submix will require you to install the magisk systemizer module. You will not be able to hear any audio while recording and this is not a bug.\n\n Read FAQ to know more</string>
+    <string name="alert_dialog_internal_audio_warning_faq_text">Show FAQ</string>
+    <string name="alert_dialog_internal_audio_warning_negative_btn_text">Do not show this message again</string>
+
+    <!-- Other Strings -->
+    <string name="snackbar_storage_permission_message">Grant storage perm</string>
+    <string name="snackbar_storage_permission_action_enable">ENABLE</string>
+    <string name="toast_magisk_module_required_message">Magisk module is required</string>
+
+    <!-- Preference Titles -->
+    <string name="video_settings_header">Video Settings</string>
+    <string name="audio_settings_header">Audio Settings</string>
+    <string name="recording_settings_header">Recording Settings</string>
+    <string name="save_settings_header">Save Options</string>
+    <string name="misc_settings_header">Misc</string>
+    <string name="analytics_settings_header">Anonymous Analytics</string>
+    <string name="experimental_settings_header">Experimental</string>
+    <string name="advance_video_settings_header">Advance Video Settings</string>
+
+    <!-- Video Preferences -->
+    <string name="preference_resolution_title">Resolution</string>
+    <string name="preference_resolution_summary">Select the resolution to record at</string>
+    <string name="res_key" translatable="false">resolution</string>
+
+    <string name="preference_fps_title">Frames per second</string>
+    <string name="preference_fps_summary">Choose fps to record at</string>
+    <string name="fps_key" translatable="false">fps</string>
+
+    <string name="preference_bit_title">Bit rate</string>
+    <string name="preference_bit_summary">Choose bit rate</string>
+    <string name="bitrate_key" translatable="false">bitrate</string>
+
+    <string name="preference_orientation_summary">Default orientation</string>
+    <string name="preference_orientation_title">Orientation</string>
+    <string name="orientation_key" translatable="false">orientation</string>
+
+    <!-- Audio Preferences -->
+    <string name="preference_audio_record_title">Audio Source</string>
+    <string name="preference_audio_record_summary">Records audio from mic along with screen video</string>
+    <string name="audiorec_key" translatable="false">audioSource</string>
+
+    <string name="preference_audio_bitrate_title">Audio Bitrate</string>
+    <string name="audiobitrate_key" translatable="false">audiobitrate</string>
+
+    <string name="preference_audio_channel_title">Audio channel</string>
+    <string name="audiochannels_key" translatable="false">audiochannels</string>
+
+    <string name="preference_audio_sampling_rate_title">Audio sampling rate</string>
+    <string name="audiosamplingrate_key" translatable="false">audiosamplingrate</string>
+
+    <string name="preference_audio_settings_unavailable_summary">This setting is unavailable for the selected audio source</string>
+
+    <!-- Recording Settings -->
+    <string name="preference_floating_control_title">Use Floating Controls</string>
+    <string name="preference_floating_control_summary">Enable/Disable floating controls which draws over every screen</string>
+    <string name="preference_floating_control_key" translatable="false">floating_controls</string>
+
+    <string name="preference_show_touch_title">Show touches</string>
+    <string name="preference_show_touch_summary">Enable/disable touch</string>
+    <string name="preference_show_touch_key" translatable="false">touch_pointer</string>
+
+    <string name="preference_camera_overlay_title">Show Camera Overlay</string>
+    <string name="preference_camera_overlay_summary">Enable/Disable Camera overlay. You can switch between front and back camera</string>
+    <string name="preference_camera_overlay_key" translatable="false">camera_overlay</string>
+
+    <string name="preference_enable_target_app_title">Enable target app</string>
+    <string name="preference_enable_target_app_summary">Open target app before recording</string>
+    <string name="preference_enable_target_app_key" translatable="false">enable_app_target</string>
+
+    <string name="preference_app_chooser_title">Choose App</string>
+    <string name="preference_app_chooser_summary">Choose an app to start by default while recording</string>
+    <string name="preference_app_chooser_key" translatable="false">app_chosen</string>
+
+    <!-- Misc Settings -->
+    <string name="preference_language_title">Language</string>
+    <string name="preference_language_summary">Override device default language</string>
+    <string name="preference_language_key" translatable="false">language_key</string>
+
+
+    <string name="preference_magisk_download_title">ScreenCam Magisk Module</string>
+    <string name="preference_magisk_download_summary">Download magisk module for enabling internal audio recording</string>
+    <string name="preference_magisk_download_key" translatable="false">magisk_download_key</string>
+
+    <string name="preference_faq_title">FAQ</string>
+    <string name="preference_faq_summary">Frequently Asked Questions and Answers</string>
+    <string name="preference_faq_key" translatable="false">faq</string>
+
+    <string name="preference_advance_settings_title">Advance Settings</string>
+    <string name="preference_advance_settings_summary">Advance settings which may not be stable and could cause app to crash</string>
+
+
+    <string name="filename_key" translatable="false">filename</string>
+    <string name="fileprefix_key" translatable="false">fileprefix</string>
+
+    <!-- Advanced Settings -->
+    <string name="preference_advanced_settings_warning_text">WARNING: Changing these settings without knowing what they are is highly risky.\n\nMost if not all of these settings could lead to stability issues and frequent crashes. Support will be limited with these settings modified.</string>
+
+    <!-- Video Settings -->
+    <string name="preference_advanced_settings_video_encoder_title">Video Encoder</string>
+    <string name="preference_advanced_settings_video_encoder_description">Override the default encoder.</string>
+    <string name="preference_advanced_settings_video_encoder_key">video_encoder</string>
+
+    <!-- Countly Strings -->
+    <string name="prefs_category_analytics_title">Anonymous analytics</string>
+
+    <string name="preference_crash_reporting_title">Crash reporting</string>
+    <string name="preference_crash_reporting_summary">Enable anonymous crash reporting</string>
+    <string name="preference_crash_reporting_key" translatable="false">crash_reporting</string>
+
+    <string name="preference_anonymous_statistics_title">Anonymous statistics</string>
+    <string name="preference_anonymous_statistics_summary">Enable anonymous statistics on number of app usages</string>
+    <string name="preference_anonymous_statistics_key" translatable="false">usage_statistics</string>
+
+    <!-- Toast messages -->
+    <string name="recording_failed_toast">Screen recording failed.</string>
+    <string name="fatal_exception_message">ScreenRecorder: Saving video failed!</string>
+    <string name="screen_recording_stopped_toast">Screen Recording stopped</string>
+    <string name="screen_recording_resumed_toast">Screen Recording resumed</string>
+    <string name="screen_recording_paused_toast">Screen Recording paused</string>
+
+    <!-- About activity Strings -->
+    <string name="about_info">Info</string>
+    <string name="about_credits">Credits</string>
+    <string name="about_libraries">Libraries</string>
+    <string name="about_opensource">Open Source</string>
+    <string name="about_info_footer" translatable="false">ScreenCam &#169; 2014-%1$d</string>
+    <string name="about_info_source">Source code</string>
+    <string name="about_info_license" translatable="false">GNU AGPLv3</string>
+    <string name="about_info_translation">Help with translation</string>
+    <string name="about_info_support">Support</string>
+    <string name="about_info_version">Version:</string>
+    <string name="about_info_magisk_mode">Magisk Mode:</string>
+    <string name="about_info_root_mode">Root Mode:</string>
+    <string name="about_info_build_type">Build Type:</string>
+    <string name="app_icon_credit_Niko">App Icons by %1$s\n\nwebsite: %2$s\n\nAll rights reserved by the designer with exclusive forever license for the official app only</string>
+    <string name="video_editor_library_credit">Video Editor by %1$s\n\nGithub url: %2$s\n\nLicense: %3$s</string>
+    <string name="analytics_library_credit">Crash reporting and analytics SDK by %1$s\n\nGithub url: %2$s\n\nLicense: %3$s</string>
+    <string name="iap_library_credit">In-app purchase helper library by %1$s\n\nGithub url: %2$s\n\nLicense: %3$s</string>
+    <string name="changelog_library_credit">Changelog display library by %1$s\n\nGithub url: %2$s\n\nLicense: %3$s</string>
+    <string name="opensource_info">This app is open source and the source could be obtained at \n\nGitlab url: %1$s\n\nLicense: %2$s</string>
+
+    <!-- Notification Strings -->
+    <string name="share_intent_title">Share recorded</string>
+    <string name="share_intent_notification_title">Share recorded video</string>
+    <string name="share_intent_notification_content">click to open the recorded videos</string>
+    <string name="share_intent_notification_action_text">Share</string>
+    <string name="screen_recording_notification_title">Screen recording</string>
+    <string name="screen_recording_notification_action_stop">Stop</string>
+    <string name="screen_recording_notification_action_pause">Pause</string>
+    <string name="screen_recording_notification_action_resume">Resume</string>
+
+    <!-- Misc -->
+    <string name="default_language">Default</string>
+</resources>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:animateLayoutChanges="true"
+        android:backgroundTint="@color/colorPrimary"
+        android:clickable="false"
+        app:fabAlignmentMode="center"
+        app:hideOnScroll="true" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:animateLayoutChanges="true"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/transparent"
+            app:elevation="0dp"
+            android:clickable="false"
+            app:itemIconTint="@color/navigation_view_selector_background"
+            app:itemTextColor="@color/navigation_view_selector_background"
+            app:menu="@menu/bottom_nav_menu" />
+    </FrameLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_record"
+        app:layout_anchor="@id/bottom_bar" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

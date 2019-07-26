@@ -1,0 +1,131 @@
+<resources>
+    <string-array name="fpsArray" translatable="false">
+        <item>25</item>
+        <item>30</item>
+        <item>60</item>
+    </string-array>
+
+    <string-array name="resolutionsArray" translatable="false">
+        <item>360P</item>
+        <item>720P</item>
+        <item>1080P</item>
+        <item>1440P</item>
+    </string-array>
+
+    <string-array name="resolutionValues" translatable="false">
+        <item>360</item>
+        <item>720</item>
+        <item>1080</item>
+        <item>1440</item>
+    </string-array>
+
+    <string-array name="orientationEntries" translatable="false">
+        <item>Auto</item>
+        <item>Portrait</item>
+        <item>Landscape</item>
+    </string-array>
+
+    <string-array name="orientationValues" translatable="false">
+        <item>auto</item>
+        <item>portrait</item>
+        <item>landscape</item>
+    </string-array>
+
+    <string-array name="bitrateArray" translatable="false">
+        <item>1.0 Mbit (Very low)</item>
+        <item>2.5 Mbit</item>
+        <item>3.5Mbit (low)</item>
+        <item>4.5 Mbit</item>
+        <item>6.8 Mbit (Good)</item>
+        <item>9.8 Mbit</item>
+        <item>12 Mbit (Excellent)</item>
+        <item>24 Mbit (Warning)</item>
+        <item>48 Mbit (Warning)</item>
+    </string-array>
+
+    <string-array name="bitratesValue" translatable="false">
+        <item>1048576</item>
+        <item>2621440</item>
+        <item>3670016</item>
+        <item>4718592</item>
+        <item>7130317</item>
+        <item>10276045</item>
+        <item>12582912</item>
+        <item>25165824</item>
+        <item>50331648</item>
+    </string-array>
+
+    <!-- Audio settings -->
+    <string-array name="audioSettingsEntries">
+        <item>None</item>
+        <item>Mic</item>
+        <item>Internal Audio with Mic (Non-root)</item>
+        <item>Internal Audio (Root + magisk module)</item>
+    </string-array>
+
+    <string-array name="audioSettingsValues">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+
+    <string-array name="audioBitRates">
+        <item>128 kbps</item>
+        <item>192 kbps</item>
+        <item>256 kbps</item>
+        <item>320 kbps</item>
+    </string-array>
+
+    <string-array name="audioBitRateValues">
+        <item>128000</item>
+        <item>192000</item>
+        <item>256000</item>
+        <item>320000</item>
+    </string-array>
+
+    <string-array name="audioChannels">
+        <item>Mono</item>
+        <item>Stereo</item>
+    </string-array>
+
+    <string-array name="audioChannelValues">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="audioSamplingRates">
+        <item>32 KHz</item>
+        <item>44.1 KHz</item>
+        <item>48 KHz</item>
+    </string-array>
+
+    <string-array name="audioSamplingRateValues">
+        <item>32000</item>
+        <item>44100</item>
+        <item>48000</item>
+    </string-array>
+
+    <string-array name="videoEncoderEntries">
+        <item>Do not override</item>
+        <item>HEVC</item>
+        <item>H.254</item>
+        <item>Device Default</item>
+    </string-array>
+
+    <string-array name="videoEncoderValues">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="languageEntries" translatable="false">
+        <item>Default</item>
+        <item>fr</item>
+        <item>en</item>
+        <item>zh_CN</item>
+        <item>zh_TW</item>
+    </string-array>
+</resources>

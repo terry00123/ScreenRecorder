@@ -9,7 +9,6 @@ import android.media.projection.MediaProjection;
 import android.media.projection.MediaProjectionManager;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -32,10 +31,6 @@ import com.orpheusdroid.screenrecorder.ui.settings.fragments.RootSettingsFragmen
 import com.orpheusdroid.screenrecorder.utils.Log;
 import com.orpheusdroid.screenrecorder.utils.PermissionHelper;
 
-import org.apache.commons.io.FileUtils;
-
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class MainActivity extends BaseActivity {
@@ -127,17 +122,17 @@ public class MainActivity extends BaseActivity {
         permissionHelper.requestPermissionStorage();
     }
 
-    public void setPermissionListener(IPermissionListener permissionListener){
+    public void setPermissionListener(IPermissionListener permissionListener) {
         this.permissionListener = permissionListener;
     }
 
-    public void setBottomBarVisibility(boolean isVisible){
+    public void setBottomBarVisibility(boolean isVisible) {
         if (isVisible) {
             navView.setVisibility(View.VISIBLE);
             bottomAppBar.setVisibility(View.VISIBLE);
             //bottomAppBar.animate().translationY(0).alpha(1.0f);
             fab.show();
-        }else {
+        } else {
             navView.setVisibility(View.GONE);
             bottomAppBar.setVisibility(View.GONE);
             //bottomAppBar.animate().translationY(bottomAppBar.getHeight()).alpha(0.0f);
@@ -154,7 +149,7 @@ public class MainActivity extends BaseActivity {
             fab.setEnabled(false);
             permissionHelper.showSnackbar();
         } else if ((grantResults.length > 0) &&
-                (grantResults[0] == PackageManager.PERMISSION_GRANTED)){
+                (grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
             /* Since we have write storage permission now, lets create the app directory
              * in external storage*/
             Log.d(Const.TAG, "write storage Permission granted");
@@ -220,7 +215,7 @@ public class MainActivity extends BaseActivity {
         startService(recorderService);
 
         //if (intentAction != null && intentAction.equals(getString(R.string.app_shortcut_action)))
-            //this.finish();
+        //this.finish();
     }
 
     @Override

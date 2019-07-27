@@ -49,7 +49,8 @@
         <service
             android:name=".services.RecordingService"
             android:enabled="true"
-            android:exported="false" />
+            android:exported="false"
+            android:foregroundServiceType="mediaProjection"/>
         <service
             android:name=".services.FloatingControlService"
             android:enabled="true"

@@ -158,7 +158,7 @@ public class RecordingService extends Service {
     }
 
     private void startRecording(){
-
+        showNotification();
         config.buildConfig();
         resolution = resolutionHelper.getWidthHeight();
 
@@ -202,7 +202,6 @@ public class RecordingService extends Service {
 
         try {
             mMediaRecorder.start();
-            showNotification();
         } catch (IllegalStateException ise){
             Log.d(Const.TAG, "188: Media recorder start failed");
             ise.printStackTrace();

@@ -267,7 +267,7 @@ public class RecordingService extends Service {
             android.util.Log.d(Const.TAG, "Unbinding connection service");
         }
 
-        if (config.isFloatingControls())
+        if (floatingControlService !=null)
             floatingControlService.onRecordingStopped();
         stopScreenSharing();
     }

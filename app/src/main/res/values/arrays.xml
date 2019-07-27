@@ -110,7 +110,7 @@
     <string-array name="videoEncoderEntries">
         <item>Do not override</item>
         <item>HEVC</item>
-        <item>H.254</item>
+        <item>H.264</item>
         <item>Device Default</item>
     </string-array>
 

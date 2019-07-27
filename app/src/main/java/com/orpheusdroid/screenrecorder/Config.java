@@ -32,6 +32,8 @@ public class Config {
     private boolean targetApp;
     private String targetAppPackage;
 
+    private String codecOverride;
+
     private String language;
 
     public String getSaveLocation() {
@@ -170,6 +172,14 @@ public class Config {
         this.language = language;
     }
 
+    public String getCodecOverride() {
+        return codecOverride;
+    }
+
+    public void setCodecOverride(String codecOverride) {
+        this.codecOverride = codecOverride;
+    }
+
     public static Config getInstance(Context mContext){
         if (config == null) {
             config = new Config(mContext);
@@ -208,6 +218,8 @@ public class Config {
         targetApp = preferences.getBoolean(getString(R.string.preference_enable_target_app_key), false);
         targetAppPackage = preferences.getString(getString(R.string.preference_app_chooser_key), "");
 
+        codecOverride = preferences.getString(getString(R.string.preference_advanced_settings_video_encoder_key), "0");
+
         language = preferences.getString(getString(R.string.preference_language_key), Locale.getDefault().getISO3Language());
     }
 
@@ -218,7 +230,11 @@ public class Config {
     @Override
     public String toString() {
         return "Config{" +
-                "resolution='" + resolution + '\'' +
+                "mContext=" + mContext +
+                ", saveLocation='" + saveLocation + '\'' +
+                ", fileFormat='" + fileFormat + '\'' +
+                ", prefix='" + prefix + '\'' +
+                ", resolution='" + resolution + '\'' +
                 ", fps='" + fps + '\'' +
                 ", videoBitrate='" + videoBitrate + '\'' +
                 ", orientation='" + orientation + '\'' +
@@ -231,6 +247,8 @@ public class Config {
                 ", cameraOverlay=" + cameraOverlay +
                 ", targetApp=" + targetApp +
                 ", targetAppPackage='" + targetAppPackage + '\'' +
+                ", codecOverride='" + codecOverride + '\'' +
+                ", language='" + language + '\'' +
                 '}';
     }
 }

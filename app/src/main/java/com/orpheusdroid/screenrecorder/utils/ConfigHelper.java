@@ -174,6 +174,17 @@ public class ConfigHelper {
     }
 
     public int getBestVideoEncoder(int width, int height) {
+        String codecOverride = Config.getInstance(mContext).getCodecOverride();
+        if (! codecOverride.equals("0")){
+            switch (codecOverride){
+                case "1":
+                    return MediaRecorder.VideoEncoder.HEVC;
+                case "2":
+                    return MediaRecorder.VideoEncoder.H264;
+                case "3":
+                    return MediaRecorder.VideoEncoder.DEFAULT;
+            }
+        }
         int VideoCodec = MediaRecorder.VideoEncoder.DEFAULT;
         if (getMediaCodecFor(MediaFormat.MIMETYPE_VIDEO_HEVC, width, height)) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {

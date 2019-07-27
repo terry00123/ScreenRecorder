@@ -6,8 +6,8 @@ android {
         applicationId "com.orpheusdroid.screenrecorder"
         minSdkVersion 23
         targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        versionCode 999
+        versionName "3.X.X Alpha"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     signingConfigs {

@@ -17,6 +17,7 @@ public class Const {
     public static final int SCREEN_RECORD_REQUEST_CODE = 105;
     public static final int CAMERA_REQUEST_CODE = 106;
     public static final int CAMERA_SYSTEM_WINDOWS_CODE = 107;
+    public static final int VIDEO_FRAGMENT_EXTDIR_REQUEST_CODE = 108;
 
     // Preference Keys
     public static final String PREFS_REQUEST_ANALYTICS_PERMISSION = "request_analytics_permission";

@@ -47,7 +47,7 @@ public class PermissionHelper
      *
      * @return boolean
      */
-    public boolean requestPermissionStorage() {
+    public boolean requestPermissionStorage(int RequestCode) {
         if (ContextCompat.checkSelfPermission(mContext, Manifest.permission.WRITE_EXTERNAL_STORAGE)
                 != PackageManager.PERMISSION_GRANTED) {
             AlertDialog.Builder alert = new AlertDialog.Builder(mContext)
@@ -55,7 +55,7 @@ public class PermissionHelper
                     .setMessage(getString(R.string.storage_permission_request_summary))
                     .setNeutralButton(getString(android.R.string.ok), (dialogInterface, i) -> ActivityCompat.requestPermissions(mContext,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
-                            Const.EXTDIR_REQUEST_CODE))
+                            RequestCode))
                     .setCancelable(false);
 
             alert.create().show();
@@ -63,7 +63,7 @@ public class PermissionHelper
         }
         ActivityCompat.requestPermissions(mContext,
                 new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
-                Const.EXTDIR_REQUEST_CODE);
+                RequestCode);
         return true;
     }
 
@@ -139,7 +139,7 @@ public class PermissionHelper
                 Snackbar.LENGTH_INDEFINITE).setAction(R.string.snackbar_storage_permission_action_enable,
                 v -> {
                     if (mContext != null){
-                        requestPermissionStorage();
+                        requestPermissionStorage(Const.EXTDIR_REQUEST_CODE);
                     }
                 }).show();
     }

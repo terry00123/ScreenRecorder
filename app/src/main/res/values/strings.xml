@@ -142,6 +142,9 @@
     <string name="screen_recording_resumed_toast">Screen Recording resumed</string>
     <string name="screen_recording_paused_toast">Screen Recording paused</string>
 
+    <!-- Video fragment strings -->
+    <string name="video_list_no_video_message">No videos available</string>
+
     <!-- About activity Strings -->
     <string name="about_info">Info</string>
     <string name="about_credits">Credits</string>

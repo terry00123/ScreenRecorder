@@ -12,4 +12,6 @@
     <dimen name="floating_controls_min_width">93.0dip</dimen>
     <dimen name="floating_controls_view_radius">51.0dip</dimen>
     <dimen name="floating_controls_time_text_size">16.0dip</dimen>
+
+    <dimen name="video_list_margin">5dp</dimen>
 </resources>

@@ -26,6 +26,7 @@ import com.orpheusdroid.screenrecorder.Const;
 import com.orpheusdroid.screenrecorder.DonateActivity;
 import com.orpheusdroid.screenrecorder.R;
 import com.orpheusdroid.screenrecorder.interfaces.IPermissionListener;
+import com.orpheusdroid.screenrecorder.interfaces.VideoFragmentListener;
 import com.orpheusdroid.screenrecorder.services.RecordingService;
 import com.orpheusdroid.screenrecorder.ui.settings.fragments.RootSettingsFragment;
 import com.orpheusdroid.screenrecorder.utils.Log;
@@ -41,6 +42,7 @@ public class MainActivity extends BaseActivity {
     private BottomAppBar bottomAppBar;
     private MediaProjectionManager mMediaProjectionManager;
     private MediaProjection mediaProjection;
+    private VideoFragmentListener videoFragmentListener;
 
     private ArrayList<String> files = new ArrayList<>();
 
@@ -58,18 +60,29 @@ public class MainActivity extends BaseActivity {
                             .commit();
                     fab.show();
                     return true;
-                case R.id.navigation_notifications:
+                case R.id.videos:
                     getSupportFragmentManager()
                             .beginTransaction()
                             .setCustomAnimations(R.anim.fade_in, R.anim.fade_out)
                             .replace(R.id.fragment, new VideoListFragment())
                             .commit();
                     fab.hide();
+                    //permissionHelper.requestPermissionStorage(Const.VIDEO_FRAGMENT_EXTDIR_REQUEST_CODE);
                     return true;
             }
             return false;
         }
     };
+
+    private void handleVideoFragment() {
+        Log.d(Const.TAG, "Calling video fragment");
+        getSupportFragmentManager()
+                .beginTransaction()
+                .setCustomAnimations(R.anim.fade_in, R.anim.fade_out)
+                .replace(R.id.fragment, new VideoListFragment())
+                .commit();
+        fab.hide();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,12 +94,14 @@ public class MainActivity extends BaseActivity {
                 .commit();
 
         navView = findViewById(R.id.bottom_navigation);
-        navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         bottomAppBar = findViewById(R.id.bottom_bar);
 
         //Acquiring media projection service to start screen mirroring
         mMediaProjectionManager = (MediaProjectionManager) getSystemService(Context.MEDIA_PROJECTION_SERVICE);
+
+        permissionHelper = PermissionHelper.getInstance(this);
+        init(Const.EXTDIR_REQUEST_CODE);
 
 
         fab = findViewById(R.id.fab);
@@ -108,18 +123,22 @@ public class MainActivity extends BaseActivity {
             }
         });
 
+        navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
         CoordinatorLayout.LayoutParams params = (CoordinatorLayout.LayoutParams) ((View) navView.getParent()).getLayoutParams();
         params.setBehavior(new HideBottomViewOnScrollBehavior());
 
-        permissionHelper = PermissionHelper.getInstance(this);
-        init();
 
         Config config = Config.getInstance(this);
         config.buildConfig();
     }
 
-    private void init() {
-        permissionHelper.requestPermissionStorage();
+    public void init(int RequestCode) {
+        permissionHelper.requestPermissionStorage(RequestCode);
+    }
+
+    public void setVideoFragmentListener(VideoFragmentListener videoFragmentListener) {
+        this.videoFragmentListener = videoFragmentListener;
     }
 
     public void setPermissionListener(IPermissionListener permissionListener) {
@@ -221,8 +240,18 @@ public class MainActivity extends BaseActivity {
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         Log.d("Permission", requestCode + "");
-        if (requestCode == Const.EXTDIR_REQUEST_CODE) {
-            handleStoragePermission(grantResults);
+
+        switch (requestCode) {
+            case Const.EXTDIR_REQUEST_CODE:
+                handleStoragePermission(grantResults);
+                break;
+            case Const.VIDEO_FRAGMENT_EXTDIR_REQUEST_CODE:
+                if ((grantResults.length > 0) &&
+                        (grantResults[0] != PackageManager.PERMISSION_GRANTED)) {
+                    videoFragmentListener.onStorageResult(false);
+                } else
+                    videoFragmentListener.onStorageResult(true);
+                break;
         }
 
         if (permissionListener != null)
